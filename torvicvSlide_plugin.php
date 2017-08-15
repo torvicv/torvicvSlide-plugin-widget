@@ -13,15 +13,15 @@ add_action( 'admin_enqueue_scripts', 'np_admin_register_script' );
 
 
 function np_register_scripts(){
-    wp_enqueue_script("torvicSlidePluginJs", plugins_url().'/torvicvSlide_plugin/torvicvSlide_plugin.js', array('jquery'), time(),true);
-    wp_enqueue_script("torvicSlideWidgetJs", plugins_url().'/torvicvSlide_plugin/torvicvSlide_widget.js', array('jquery'), time(),true);    
+    wp_enqueue_script("torvicSlidePluginJs", plugins_url().'/torvicvSlide-plugin-widget/torvicvSlide_plugin.js', array('jquery'), time(),true);
+    wp_enqueue_script("torvicSlideWidgetJs", plugins_url().'/torvicvSlide-plugin-widget/torvicvSlide_widget.js', array('jquery'), time(),true);    
 }
 function np_register_styles(){
-    wp_enqueue_style("torvicSlideCss", plugins_url('torvicvSlide_plugin/torvicvSlide.css'),array(), time());
-    wp_enqueue_style("w3schoolsCss", plugins_url('torvicvSlide_plugin/w3schools.css'),array(), time());
+    wp_enqueue_style("torvicSlideCss", plugins_url('torvicvSlide-plugin-widget/torvicvSlide.css'),array(), time());
+    wp_enqueue_style("w3schoolsCss", plugins_url('torvicvSlide-plugin-widget/w3schools.css'),array(), time());
 }
 function np_admin_register_script(){
-    wp_enqueue_script("mediaPlugin", plugins_url().'/torvicvSlide_plugin/scriptMediaWidget.js', array('jquery'), time(), true);
+    wp_enqueue_script("mediaPlugin", plugins_url().'/torvicvSlide-plugin-widget/scriptMediaWidget.js', array('jquery'), time(), true);
 }
 //cambiando el nombre de la clase MySettingsPage por TorvicvSlidePlugin
 class TorvicvSlidePlugin
