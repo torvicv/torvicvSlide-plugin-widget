@@ -52,20 +52,20 @@ var gk_media_init = function(selector, button_selector)  {
 };
 
 function disabled_button(){
-    jQuery('div[id^="sparkle"]  input#verificar').attr("disabled", true);
-    jQuery("div[id^='sparkle']  div[id*='torvicvslide_widget'] .alignright input[id*='torvicvslide_widget']").css("display", "none");
+    jQuery('input#verificar').attr("disabled", true); 
+    jQuery("div[id*='torvicvslide_widget'] .alignright input[id*='torvicvslide_widget']").css("display", "none");//div[id^='sparkle'] 
     setInterval(function(){
 
-var ruta1 = jQuery("div[id^='sparkle'] input[id$='ruta1']").val();
-var ruta2 = jQuery("div[id^='sparkle'] input[id$='ruta2']").val();
-var ruta3 = jQuery("div[id^='sparkle'] input[id$='ruta3']").val();
-var ruta4 = jQuery("div[id^='sparkle'] input[id$='ruta4']").val();
+var ruta1 = jQuery("#widgets-right input[id$='ruta1']").val();
+var ruta2 = jQuery("#widgets-right input[id$='ruta2']").val(); 
+var ruta3 = jQuery("#widgets-right input[id$='ruta3']").val(); 
+var ruta4 = jQuery("#widgets-right input[id$='ruta4']").val(); 
 
-    // Check if empty of not
+    // Check if empty or not
     if (ruta1  === '' || ruta2  === '' || ruta3  === '' || ruta4  === '') {
-        jQuery('div[id^="sparkle"] input#verificar').attr("disabled", true);
+        jQuery('input#verificar').attr("disabled", true); 
     }else{
-        jQuery('div[id^="sparkle"] input#verificar').attr("disabled", false);
+        jQuery('input#verificar').attr("disabled", false); 
     }
     }, 1000);
 };
