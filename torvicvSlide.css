@@ -6,6 +6,14 @@ height: 400px;
 position: relative;
 overflow:hidden;
 }
+.w3-content-plugin{
+display: flex;
+perspective: 500px;
+width: 100%;
+height: 400px;
+position: relative;
+overflow:hidden;
+}
 @keyframes example2{
   from{transform: scale(2,2);
     opacity: 1;

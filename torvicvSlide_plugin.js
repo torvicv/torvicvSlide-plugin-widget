@@ -5,7 +5,7 @@
  * se llaman .mySlides_plugin*/
 jQuery(document).ready(function($){
   
-   $(".w3-content br").remove();
+   $(".w3-content-plugin br").remove();
    var maxHeight = -1;
    $('.mySlides_plugin').each(function() {
      maxHeight = maxHeight > $(this).height() ? maxHeight : $(this).height();
@@ -15,7 +15,7 @@ jQuery(document).ready(function($){
      $(this).height(maxHeight);
    });
   
-  $(".w3-content").height(($(".mySlides_plugin").height() * 2) + 100);  
+  $(".w3-content-plugin").height(($(".mySlides_plugin").height() * 2) + 100);  
   $(".mySlides_plugin:gt(2)").css("display","none");
   var porcentajes = [0,37.5,100];
   var porcentajes2 = [-25,37.5,75];
@@ -64,7 +64,7 @@ jQuery(document).ready(function($){
      
      if(j == 1){
       $(slide).addClass("activado");
-      $(".w3-content").height($(slide).height()*2+100);
+      $(".w3-content-plugin").height($(slide).height()*2+100);
      }else{
       $(slide).removeClass("activado");
      }
@@ -96,7 +96,7 @@ jQuery(document).ready(function($){
     for (i = 0; i < slides.length; i++) {
      slide = slides[i];
 
-     $(".w3-content").height($(slide).height()*2+100);
+     $(".w3-content-plugin").height($(slide).height()*2+100);
 
      j = v+i;
      if ( j > 3){

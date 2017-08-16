@@ -249,26 +249,30 @@ class TorvicvSlidePlugin
         $myField5 = get_option( 'my_option_name' )['ruta5'];
         $myField6 = get_option( 'my_option_name' )['ruta6'];
         
-        $formato = '<div class="w3-content w3-display-container">
-                <img class="mySlides_plugin" style="order: 0;" src=" %s " />
-                <img class="mySlides_plugin class2" style="order: 1;" src=" %s " />
-                <img class="mySlides_plugin" style="order: 2;" src=" %s " />
-
-                <img class="mySlides_plugin" style="order: 3;" src=" %s " />
-
-                <img class="mySlides_plugin" style="order: 4;" src=" %s " />
-
-                <img class="mySlides_plugin" style="order: 5;" src=" %s " />
-
-                <button class="w3-button w3-black w3-display-left">&#10094;</button>
-                <button class="w3-button w3-black w3-display-right">&#10095;</button>
-                </div>';
         $ruta1 = esc_attr( $myField1 );
         $ruta2 = esc_attr( $myField2 );
         $ruta3 = esc_attr( $myField3 );
         $ruta4 = esc_attr( $myField4 );
         $ruta5 = esc_attr( $myField5 );
         $ruta6 = esc_attr( $myField6 );
+        
+        $formato = '<div class="w3-content-plugin w3-display-container">
+                <img class="mySlides_plugin" style="order: 0;" src=" %s " />
+                <img class="mySlides_plugin class2" style="order: 1;" src=" %s " />
+                <img class="mySlides_plugin" style="order: 2;" src=" %s " />';
+    if(!empty($ruta4)){
+        $formato .= '<img class="mySlides_plugin" style="order: 3;" src=" %s " />';
+    }
+    if(!empty($ruta5)){
+        $formato .= '<img class="mySlides_plugin" style="order: 4;" src=" %s " />';
+    }
+    if(!empty($ruta6)){
+        $formato .= '<img class="mySlides_plugin" style="order: 5;" src=" %s " />';
+    }
+        $formato .= '<button class="w3-button w3-black w3-display-left">&#10094;</button>
+                <button class="w3-button w3-black w3-display-right">&#10095;</button>
+                </div>';
+        
 
         $mostrar = sprintf($formato, $ruta1, $ruta2, $ruta3, $ruta4, $ruta5, $ruta6);
         return $mostrar;

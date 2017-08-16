@@ -52,20 +52,20 @@ var gk_media_init = function(selector, button_selector)  {
 };
 
 function disabled_button(){
-    jQuery('#sparklesidebarone input#verificar').attr("disabled", true);
-    jQuery("#sparklesidebarone div[id*='torvicvslide_widget'] .alignright input[id*='torvicvslide_widget']").css("display", "none");
+    jQuery('div[id^="sparkle"]  input#verificar').attr("disabled", true);
+    jQuery("div[id^='sparkle']  div[id*='torvicvslide_widget'] .alignright input[id*='torvicvslide_widget']").css("display", "none");
     setInterval(function(){
 
-var ruta1 = jQuery("#sparklesidebarone input[id$='ruta1']").val();
-var ruta2 = jQuery("#sparklesidebarone input[id$='ruta2']").val();
-var ruta3 = jQuery("#sparklesidebarone input[id$='ruta3']").val();
-var ruta4 = jQuery("#sparklesidebarone input[id$='ruta4']").val();
+var ruta1 = jQuery("div[id^='sparkle'] input[id$='ruta1']").val();
+var ruta2 = jQuery("div[id^='sparkle'] input[id$='ruta2']").val();
+var ruta3 = jQuery("div[id^='sparkle'] input[id$='ruta3']").val();
+var ruta4 = jQuery("div[id^='sparkle'] input[id$='ruta4']").val();
 
     // Check if empty of not
     if (ruta1  === '' || ruta2  === '' || ruta3  === '' || ruta4  === '') {
-        jQuery('#sparklesidebarone input#verificar').attr("disabled", true);
+        jQuery('div[id^="sparkle"] input#verificar').attr("disabled", true);
     }else{
-        jQuery('#sparklesidebarone input#verificar').attr("disabled", false);
+        jQuery('div[id^="sparkle"] input#verificar').attr("disabled", false);
     }
     }, 1000);
 };
@@ -75,3 +75,6 @@ gk_media_init('.upload_image_input', '.upload_image_button');
 disabled_button();
  
 });
+
+//he cambiado #sparklesidebarone por otro selector  div[id^='sparkle'] para que afecte todas los sidebar y
+// main area que hay en los widgets.
