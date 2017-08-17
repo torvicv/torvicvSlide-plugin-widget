@@ -1,4 +1,11 @@
 <?php
+
+/*
+Plugin Name: torvicvSlide_widget
+Description: Widget for sliding pictures
+Author: Victor Cabral Vida
+Version: 0.3
+*/
 // Creamos el widget 
 class wpb_widget extends WP_Widget {
     private $titulo_trad;
@@ -182,3 +189,9 @@ $instance['ruta6'] = ( ! empty( $new_instance['ruta6'] ) ) ? strip_tags( $new_in
 return $instance;
 }
 }// la clase termina aquí
+
+
+function wpb_load_widget() {
+	register_widget( 'wpb_widget' );
+}
+add_action( 'widgets_init', 'wpb_load_widget' );
