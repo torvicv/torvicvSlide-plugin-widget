@@ -1,0 +1,104 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Package Name\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-08-17 23:57+0200\n"
+"PO-Revision-Date: 2017-08-18 22:17+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.0.3\n"
+"Last-Translator: \n"
+"Language: en\n"
+
+#: torvicvSlide_plugin.php:100
+msgid "Configuracion personalizada"
+msgstr "Custom settings"
+
+#: torvicvSlide_plugin.php:107
+msgid "Ruta 1:"
+msgstr "Route 1:"
+
+#: torvicvSlide_plugin.php:115
+msgid "Ruta 2:"
+msgstr "Route 2:"
+
+#: torvicvSlide_plugin.php:123
+msgid "Ruta 3:"
+msgstr "Route 3:"
+
+#: torvicvSlide_plugin.php:131
+msgid "Ruta 4:"
+msgstr "Route 4:"
+
+#: torvicvSlide_plugin.php:139
+msgid "Ruta 5:"
+msgstr "Route 5:"
+
+#: torvicvSlide_plugin.php:147
+msgid "Ruta 6:"
+msgstr "Route 6:"
+
+#: torvicvSlide_plugin.php:189
+msgid "Introduzca sus configuraciones abajo:"
+msgstr "Enter your settings below:"
+
+#: torvicvSlide_plugin.php:199 torvicvSlide_plugin.php:210
+#: torvicvSlide_plugin.php:219 torvicvSlide_plugin.php:228
+#: torvicvSlide_plugin.php:237 torvicvSlide_plugin.php:246
+msgid "Seleccionar imagen"
+msgstr "Select image"
+
+#: torvicvSlide_widget.php:28
+msgid "Torvicv Slide"
+msgstr ""
+
+#: torvicvSlide_widget.php:91
+msgid "Titulo"
+msgstr "Title"
+
+msgid "include.path"
+msgstr ""
+
+msgid "php.version"
+msgstr ""
+
+msgid "source.encoding"
+msgstr ""
+
+msgid "src.dir"
+msgstr ""
+
+msgid "tags.asp"
+msgstr ""
+
+msgid "tags.short"
+msgstr ""
+
+msgid "web.root"
+msgstr ""
+
+msgid "copy.src.files"
+msgstr ""
+
+msgid "copy.src.on.open"
+msgstr ""
+
+msgid "copy.src.target"
+msgstr ""
+
+msgid "index.file"
+msgstr ""
+
+msgid "run.as"
+msgstr ""
+
+msgid "url"
+msgstr ""

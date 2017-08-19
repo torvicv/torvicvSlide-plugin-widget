@@ -5,6 +5,8 @@ Plugin Name: torvicvSlide_plugin
 Description: Plugin for sliding pictures
 Author: Victor Cabral Vida
 Version: 0.1
+Text Domain: torvicvSlide-plugin-widget-master
+Domain Path: /languages
 */
 
 add_action('wp_print_scripts', 'np_register_scripts');
@@ -37,23 +39,21 @@ class TorvicvSlidePlugin
     public function __construct()
     {
         add_shortcode( 'torvicvSlide', array( $this, 'show_slide' ) );
-        add_action( 'admin_menu', array( $this, 'add_plugin_page' ) );
+        //add_action( 'admin_menu', array( $this, 'add_plugin_page' ) );
+        add_action('admin_menu', array ($this,'torvicvSlide_plugin_setup_menu'));
         add_action( 'admin_init', array( $this, 'page_init' ) );
-    }
+        add_action('init', array( $this,'wan_load_textdomain'));
 
+    }
+    public function wan_load_textdomain() {
+	load_plugin_textdomain( 'torvicvSlide-plugin-widget-master', false,basename( dirname( __FILE__ ) ) .'/languages' );
+
+    }
     /**
      * Add options page
      */
-    public function add_plugin_page()
-    {
-        // This page will be under "Settings"
-        add_options_page(
-            'Settings Admin', 
-            'My Settings', 
-            'manage_options', 
-            'my-setting-admin', 
-            array( $this, 'create_admin_page' )
-        );
+    public function torvicvSlide_plugin_setup_menu(){
+        add_menu_page( 'TorvicvSlide Plugin Page', 'TorvicvSlide settings', 'manage_options', 'torvicvSlide-plugin', array( $this, 'create_admin_page') );
     }
 
     /**
@@ -65,12 +65,12 @@ class TorvicvSlidePlugin
         $this->options = get_option( 'my_option_name' );
         ?>
         <div class="wrap">
-            <h1>My Settings</h1>
+            <h1>TorvicvSlide settings</h1>
             <form method="post" action="options.php">
             <?php
                 // This prints out all hidden setting fields
                 settings_fields( 'my_option_group' );
-                do_settings_sections( 'my-setting-admin' );
+                do_settings_sections( 'torvicvSlide-plugin' );
                 submit_button();
             ?>
             </form>
@@ -91,56 +91,56 @@ class TorvicvSlidePlugin
 
         add_settings_section(
             'setting_section_id', // ID
-            'My Custom Settings', // Title
+            __('Configuracion personalizada','torvicvSlide-plugin-widget-master'), // Title
             array( $this, 'print_section_info' ), // Callback
-            'my-setting-admin' // Page
+            'torvicvSlide-plugin' // Page
         );  
 
         add_settings_field(
             'ruta1', // ID
-            'Ruta 1:', // Title 
+            __('Ruta 1:', 'torvicvSlide-plugin-widget-master'), // Title 
             array( $this, 'ruta1_callback' ), // Callback
-            'my-setting-admin', // Page
+            'torvicvSlide-plugin', // Page
             'setting_section_id' // Section           
         );      
 
         add_settings_field(
             'ruta2', 
-            'Ruta 2:', 
+            __('Ruta 2:', 'torvicvSlide-plugin-widget-master'), 
             array( $this, 'ruta2_callback' ), 
-            'my-setting-admin', 
+            'torvicvSlide-plugin', 
             'setting_section_id'
         );
         
         add_settings_field(
             'ruta3', // ID
-            'Ruta 3:', // Title 
+            __('Ruta 3:', 'torvicvSlide-plugin-widget-master'), // Title 
             array( $this, 'ruta3_callback' ), // Callback
-            'my-setting-admin', // Page
+            'torvicvSlide-plugin', // Page
             'setting_section_id' // Section           
         );
         
         add_settings_field(
             'ruta4', // ID
-            'Ruta 4:', // Title 
+            __('Ruta 4:', 'torvicvSlide-plugin-widget-master'), // Title 
             array( $this, 'ruta4_callback' ), // Callback
-            'my-setting-admin', // Page
+            'torvicvSlide-plugin', // Page
             'setting_section_id' // Section           
         );
         
         add_settings_field(
             'ruta5', // ID
-            'Ruta 5:', // Title 
+            __('Ruta 5:', 'torvicvSlide-plugin-widget-master'), // Title 
             array( $this, 'ruta5_callback' ), // Callback
-            'my-setting-admin', // Page
+            'torvicvSlide-plugin', // Page
             'setting_section_id' // Section           
         );
         
         add_settings_field(
             'ruta6', // ID
-            'Ruta 6:', // Title 
+            __('Ruta 6:', 'torvicvSlide-plugin-widget-master'), // Title 
             array( $this, 'ruta6_callback' ), // Callback
-            'my-setting-admin', // Page
+            'torvicvSlide-plugin', // Page
             'setting_section_id' // Section           
         );
     }
@@ -180,7 +180,7 @@ class TorvicvSlidePlugin
      */
     public function print_section_info()
     {
-        print 'Enter your settings below:';
+        print __('Introduzca sus configuraciones abajo:', 'torvicvSlide-plugin-widget-master');
     }
 
     /** 
@@ -190,7 +190,7 @@ class TorvicvSlidePlugin
     {
         printf(
             '<input type="url" id="ruta1" class="upload_image_input" name="my_option_name[ruta1]" value="%s" />'
-                . '<button class="upload_image_button">Select image</button>',
+                . '<button class="upload_image_button">'.__('Seleccionar imagen', 'torvicvSlide-plugin-widget-master').'</button>',
             isset( $this->options['ruta1'] ) ? esc_attr( $this->options['ruta1']) : '');
     }
 
@@ -201,7 +201,7 @@ class TorvicvSlidePlugin
     {
         printf(
             '<input type="url" id="ruta2" class="upload_image_input" name="my_option_name[ruta2]" value="%s" />'
-                . '<button class="upload_image_button">Select image</button>',
+                . '<button class="upload_image_button">'.__('Seleccionar imagen', 'torvicvSlide-plugin-widget-master').'</button>',
             isset( $this->options['ruta2'] ) ? esc_attr( $this->options['ruta2']) : ''
         );
     }
@@ -210,7 +210,7 @@ class TorvicvSlidePlugin
     {
         printf(
             '<input type="url" id="ruta3" class="upload_image_input" name="my_option_name[ruta3]" value="%s" />'
-                . '<button class="upload_image_button">Select image</button>',
+                . '<button class="upload_image_button">'.__('Seleccionar imagen', 'torvicvSlide-plugin-widget-master').'</button>',
             isset( $this->options['ruta3'] ) ? esc_attr( $this->options['ruta3']) : ''
         );
     }
@@ -219,7 +219,7 @@ class TorvicvSlidePlugin
     {
         printf(
             '<input type="url" id="ruta4" class="upload_image_input" name="my_option_name[ruta4]" value="%s" />'
-                . '<button class="upload_image_button">Select image</button>',
+                . '<button class="upload_image_button">'.__('Seleccionar imagen', 'torvicvSlide-plugin-widget-master').'</button>',
             isset( $this->options['ruta4'] ) ? esc_attr( $this->options['ruta4']) : ''
         );
     }
@@ -228,7 +228,7 @@ class TorvicvSlidePlugin
     {
         printf(
             '<input type="url" id="ruta5" class="upload_image_input" name="my_option_name[ruta5]" value="%s" />'
-                . '<button class="upload_image_button">Select image</button>',
+                . '<button class="upload_image_button">'.__('Seleccionar imagen', 'torvicvSlide-plugin-widget-master').'</button>',
             isset( $this->options['ruta5'] ) ? esc_attr( $this->options['ruta5']) : ''
         );
     }
@@ -237,7 +237,7 @@ class TorvicvSlidePlugin
     {
         printf(
             '<input type="url" id="ruta6" class="upload_image_input" name="my_option_name[ruta6]" value="%s" />'
-                . '<button class="upload_image_button">Select image</button>',
+                . '<button class="upload_image_button">'.__('Seleccionar imagen', 'torvicvSlide-plugin-widget-master').'</button>',
             isset( $this->options['ruta6'] ) ? esc_attr( $this->options['ruta6']) : ''
         );
     }

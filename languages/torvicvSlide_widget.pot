@@ -1,0 +1,74 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-08-19 13:01+0200\n"
+"PO-Revision-Date: 2017-08-19 13:04+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Eazy Po 0.9.5.3\n"
+
+#: torvicvSlide_widget.php:30
+msgid "Torvicv Slide"
+msgstr ""
+
+#: torvicvSlide_widget.php:33
+msgid "Widget slide creado por Victor Cabral Vida"
+msgstr "Widget slide created by Victor Cabral Vida"
+
+#: torvicvSlide_widget.php:98
+msgid "Titulo"
+msgstr "Title"
+
+#: torvicvSlide_widget.php:140
+msgid "Configuraciones personalizadas"
+msgstr "Custom settings"
+
+#: torvicvSlide_widget.php:142
+msgid "Titulo: "
+msgstr "Title:"
+
+#: torvicvSlide_widget.php:147
+msgid "ruta 1: "
+msgstr "path 1:"
+
+#: torvicvSlide_widget.php:150 torvicvSlide_widget.php:156
+#: torvicvSlide_widget.php:162 torvicvSlide_widget.php:169
+#: torvicvSlide_widget.php:175 torvicvSlide_widget.php:181
+msgid "Seleccionar imagen"
+msgstr "Select image"
+
+#: torvicvSlide_widget.php:153
+msgid "ruta 2: "
+msgstr "path 2:"
+
+#: torvicvSlide_widget.php:159
+msgid "ruta 3: "
+msgstr "path 3:"
+
+#: torvicvSlide_widget.php:166
+msgid "ruta 4: "
+msgstr "path 4:"
+
+#: torvicvSlide_widget.php:172
+msgid "ruta 5: "
+msgstr "path 5:"
+
+#: torvicvSlide_widget.php:178
+msgid "ruta 6: "
+msgstr "path 6:"
+
+#: torvicvSlide_widget.php:184
+msgid "Guardar"
+msgstr ""
