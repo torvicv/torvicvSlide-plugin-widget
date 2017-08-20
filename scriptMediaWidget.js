@@ -59,10 +59,9 @@ function disabled_button(){
 var ruta1 = jQuery("#widgets-right input[id$='ruta1']").val();
 var ruta2 = jQuery("#widgets-right input[id$='ruta2']").val(); 
 var ruta3 = jQuery("#widgets-right input[id$='ruta3']").val(); 
-var ruta4 = jQuery("#widgets-right input[id$='ruta4']").val(); 
 
     // Check if empty or not
-    if (ruta1  === '' || ruta2  === '' || ruta3  === '' || ruta4  === '') {
+    if (ruta1  === '' || ruta2  === '' || ruta3  === '') {
         jQuery('input#verificar').attr("disabled", true); 
     }else{
         jQuery('input#verificar').attr("disabled", false); 

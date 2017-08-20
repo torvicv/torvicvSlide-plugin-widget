@@ -1,6 +1,6 @@
 /*este js tiene algunas diferencia con el torvicvSlide.js del plugin 
  * hay que poner un js diferente a cada uno (el widget y el plugin) 
- * por que si no se duplican las imágenes, la diferencia es que el 
+ * por que si no se duplican las imÃ¡genes, la diferencia es que el 
  * js del widget se llaman los elementos .mySlides y en el plugin
  * se llaman .mySlides_plugin*/
 jQuery(document).ready(function($){
@@ -98,8 +98,14 @@ jQuery(document).ready(function($){
      $(".w3-content").height($(slide).height()*2+100);
 
      j = v+i;
-     if ( j > 3){
-      j=j-slides.length;
+     if(slides.length === 3){
+        if ( j >= 3){
+            j=j-slides.length;
+        }
+     }else{
+        if ( j > 3){
+            j=j-slides.length;
+        }
      }
      $(slide).css({ "left": porcentajes[j]+"%",
        "transition": "left linear 4s",
@@ -121,6 +127,11 @@ jQuery(document).ready(function($){
       $(slide).removeClass("activado");
      }
      
+     if(slides.length === 3){
+       if($(".w3-content .mySlides:nth-child(1)").is($(".mySlides.activado"))){
+         $(".w3-content .mySlides:nth-child(2)").removeClass("slide-scale");
+       }
+     }
      
      if($(slide)){
       $(slide).removeClass("class2");
