@@ -9,13 +9,13 @@
  o el que desees en tu wordpress.</p>
 <p>Para el funcionamiento del plugin tendras que insertar el código 
 <code>[torvicvSlide]</code> en la página que lo desees incluir.</p>
-<p>Ten en cuenta que algunos temas no aceptan insertar plugin en la portada, como por ejemplo sparklestore, en que 
-hay que introducirlo como widget para que se vea en la página de portada. Otros como virtue, en la página mi cuenta
+<p>Ten en cuenta que algunos temas no aceptan insertar plugin en la portada, como por ejemplo <i>sparklestore</i>, en que 
+hay que introducirlo como widget para que se vea en la página de portada. Otros como <i>virtue</i>, en la página mi cuenta
 no acepta widgets, por tanto habrá que introducirlo por el plugin.</p>
 <p>Las imágenes las selecciona de la biblioteca de tu wordpress.</p>
 <p>Si quieres insertar una imagen que no tienes en tu biblioteca primero tendrás que descargarla en la biblioteca de
 tu wordpress.</p>
-<p>Son necesarias un mínimo de 4 imágenes, el tope es 6, aunque se puede adaptar a más imágenes, si no puedes hacerlo
+<p>Son necesarias un mínimo de 3 imágenes, el tope es 6, aunque se puede adaptar a más imágenes, si no puedes hacerlo
 tu mismo, contacta conmigo en este correo:</p>
 <p>torvicv@gmail.com</p>
 <h3>Colaboración</h3>
