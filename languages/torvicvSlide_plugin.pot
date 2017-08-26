@@ -2,104 +2,61 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Package Name\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-17 23:57+0200\n"
-"PO-Revision-Date: 2017-08-18 00:03+0100\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: BUG-EMAIL-ADDR <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: yyyy-mm-dd hh:mm+0000\n"
+"PO-Revision-Date: 2017-08-26 14:09+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "X-Generator: Eazy Po 0.9.5.3\n"
 
-#: torvicvSlide_plugin.php:100
+#: torvicvSlide_plugin.php:109
 msgid "Configuracion personalizada"
-msgstr "Custom settings"
-
-#: torvicvSlide_plugin.php:107
-msgid "Ruta 1:"
-msgstr "Path 1:"
-
-#: torvicvSlide_plugin.php:115
-msgid "Ruta 2:"
-msgstr "Path 2:"
-
-#: torvicvSlide_plugin.php:123
-msgid "Ruta 3:"
-msgstr "Path 3:"
-
-#: torvicvSlide_plugin.php:131
-msgid "Ruta 4:"
-msgstr "Path 4:"
-
-#: torvicvSlide_plugin.php:139
-msgid "Ruta 5:"
-msgstr "Path 5:"
-
-#: torvicvSlide_plugin.php:147
-msgid "Ruta 6:"
-msgstr "Path 6:"
-
-#: torvicvSlide_plugin.php:189
-msgid "Introduzca sus configuraciones abajo:"
-msgstr "Enter your settings below:"
-
-#: torvicvSlide_plugin.php:199 torvicvSlide_plugin.php:210
-#: torvicvSlide_plugin.php:219 torvicvSlide_plugin.php:228
-#: torvicvSlide_plugin.php:237 torvicvSlide_plugin.php:246
-msgid "Seleccionar imagen"
-msgstr "Select image"
-
-#: torvicvSlide_widget.php:28
-msgid "Torvicv Slide"
 msgstr ""
 
-#: torvicvSlide_widget.php:91
-msgid "Titulo"
-msgstr "Title"
+#: torvicvSlide_plugin.php:116
+msgid "Ruta 1:"
+msgstr ""
 
-msgid "include.path"
-msgstr "${php.global.include.path}"
+#: torvicvSlide_plugin.php:124
+msgid "Ruta 2:"
+msgstr ""
 
-msgid "php.version"
-msgstr "PHP_70"
+#: torvicvSlide_plugin.php:132
+msgid "Ruta 3:"
+msgstr ""
 
-msgid "source.encoding"
-msgstr "UTF-8"
+#: torvicvSlide_plugin.php:140
+msgid "Ruta 4:"
+msgstr ""
 
-msgid "src.dir"
-msgstr "."
+#: torvicvSlide_plugin.php:148
+msgid "Ruta 5:"
+msgstr ""
 
-msgid "tags.asp"
-msgstr "false"
+#: torvicvSlide_plugin.php:156
+msgid "Ruta 6:"
+msgstr ""
 
-msgid "tags.short"
-msgstr "false"
+#: torvicvSlide_plugin.php:197 torvicvSlide_plugin.php:202
+#: torvicvSlide_plugin.php:207
+msgid "Seleccione una imagen"
+msgstr ""
 
-msgid "web.root"
-msgstr "."
+#: torvicvSlide_plugin.php:227
+msgid "Introduzca sus configuraciones abajo:"
+msgstr ""
 
-msgid "copy.src.files"
-msgstr "false"
-
-msgid "copy.src.on.open"
-msgstr "false"
-
-msgid "copy.src.target"
-msgstr "C:\\xampp\\htdocs\\PhpProject1"
-
-msgid "index.file"
-msgstr "index.php"
-
-msgid "run.as"
-msgstr "LOCAL"
-
-msgid "url"
-msgstr "http://localhost/files_torvicvSlide_plugin_widget/"
+#: torvicvSlide_plugin.php:237 torvicvSlide_plugin.php:249
+#: torvicvSlide_plugin.php:259 torvicvSlide_plugin.php:269
+#: torvicvSlide_plugin.php:278 torvicvSlide_plugin.php:287
+msgid "Seleccionar imagen"
+msgstr ""

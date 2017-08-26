@@ -63,15 +63,16 @@ class TorvicvSlidePlugin
     {
         // Set class property
         $this->options = get_option( 'my_option_name' );
+        $other_attributes = array('disabled'=> true);
         ?>
         <div class="wrap">
             <h1>TorvicvSlide settings</h1>
-            <form method="post" action="options.php">
+            <form method="post" action="<?php echo htmlspecialchars('options.php'); ?>">
             <?php
                 // This prints out all hidden setting fields
                 settings_fields( 'my_option_group' );
                 do_settings_sections( 'torvicvSlide-plugin' );
-                submit_button();
+                submit_button();                
             ?>
             </form>
         </div>
@@ -143,6 +144,30 @@ class TorvicvSlidePlugin
             'torvicvSlide-plugin', // Page
             'setting_section_id' // Section           
         );
+        
+        add_settings_field(
+            'required1',
+            NULL,
+            NULL, 
+            'torvicvSlide-plugin',
+            'setting_section_id'
+        );
+        
+        add_settings_field(
+            'required2',
+            NULL,
+            NULL, 
+            'torvicvSlide-plugin',
+            'setting_section_id'
+        );
+        
+        add_settings_field(
+            'required3',
+            NULL,
+            NULL, 
+            'torvicvSlide-plugin',
+            'setting_section_id'
+        );
     }
 
     /**
@@ -150,17 +175,22 @@ class TorvicvSlidePlugin
      *
      * @param array $input Contains all settings fields as array keys
      */
-    public function sanitize( $input )
-    {
+    public function sanitize( $input ){
         $new_input = array();
-        if( isset( $input['ruta1'] ) ){
+        if( !empty( $input['ruta1'] ) ){
             $new_input['ruta1'] = sanitize_text_field( $input['ruta1'] );
+        }else{
+            $new_input['required1'] = __('Seleccione una imagen', 'torvicvSlide-plugin-widget-master');
         }
-        if( isset( $input['ruta2'] ) ){
+        if( !empty( $input['ruta2'] ) ){
             $new_input['ruta2'] = sanitize_text_field( $input['ruta2'] );
+        }else{
+            $new_input['required2'] = __('Seleccione una imagen', 'torvicvSlide-plugin-widget-master');
         }
-        if( isset( $input['ruta3'] ) ){
+        if( !empty( $input['ruta3'] ) ){
             $new_input['ruta3'] = sanitize_text_field( $input['ruta3'] );
+        }else{
+            $new_input['required3'] = __('Seleccione una imagen', 'torvicvSlide-plugin-widget-master');
         }
         if( isset( $input['ruta4'] ) ){
             $new_input['ruta4'] = sanitize_text_field( $input['ruta4'] );
@@ -171,8 +201,7 @@ class TorvicvSlidePlugin
         if( isset( $input['ruta6'] ) ){
             $new_input['ruta6'] = sanitize_text_field( $input['ruta6'] );
         }
-        
-        return $new_input;
+            return $new_input;       
     }
 
     /** 
@@ -190,8 +219,9 @@ class TorvicvSlidePlugin
     {
         printf(
             '<input type="url" id="ruta1" class="upload_image_input" name="my_option_name[ruta1]" value="%s" />'
-                . '<button class="upload_image_button">'.__('Seleccionar imagen', 'torvicvSlide-plugin-widget-master').'</button>',
-            isset( $this->options['ruta1'] ) ? esc_attr( $this->options['ruta1']) : '');
+                . '<button class="upload_image_button">'.__('Seleccionar imagen', 'torvicvSlide-plugin-widget-master').'</button>'
+                . '<span> %s</span>',
+            !empty( $this->options['ruta1'] ) ? esc_attr( $this->options['ruta1']) : 'Required', $this->options['required1']);
     }
 
     /** 
@@ -201,8 +231,9 @@ class TorvicvSlidePlugin
     {
         printf(
             '<input type="url" id="ruta2" class="upload_image_input" name="my_option_name[ruta2]" value="%s" />'
-                . '<button class="upload_image_button">'.__('Seleccionar imagen', 'torvicvSlide-plugin-widget-master').'</button>',
-            isset( $this->options['ruta2'] ) ? esc_attr( $this->options['ruta2']) : ''
+                . '<button class="upload_image_button">'.__('Seleccionar imagen', 'torvicvSlide-plugin-widget-master').'</button>'
+                . '<span> %s</span>',
+            !empty( $this->options['ruta2'] ) ? esc_attr( $this->options['ruta2']) : 'Required', $this->options['required2']
         );
     }
     
@@ -210,8 +241,9 @@ class TorvicvSlidePlugin
     {
         printf(
             '<input type="url" id="ruta3" class="upload_image_input" name="my_option_name[ruta3]" value="%s" />'
-                . '<button class="upload_image_button">'.__('Seleccionar imagen', 'torvicvSlide-plugin-widget-master').'</button>',
-            isset( $this->options['ruta3'] ) ? esc_attr( $this->options['ruta3']) : ''
+                . '<button class="upload_image_button">'.__('Seleccionar imagen', 'torvicvSlide-plugin-widget-master').'</button>'
+                . '<span> %s</span>',
+            !empty( $this->options['ruta3'] ) ? esc_attr( $this->options['ruta3']) : 'Required', $this->options['required3']
         );
     }
     
